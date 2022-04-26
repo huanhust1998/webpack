@@ -3,9 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry:{
+        main:[
+            './src/index.js',
+            './src/test.js',
+        ]
+    },
     output: {
-        filename: 'bundlee.js',
+        filename: 'oneFileBundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean:true
     },

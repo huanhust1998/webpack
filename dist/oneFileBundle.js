@@ -1379,6 +1379,17 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\n//! mome
 
 /***/ }),
 
+/***/ "./src/hello.js":
+/*!**********************!*\
+  !*** ./src/hello.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"sayHello\": () => (/* binding */ sayHello)\n/* harmony export */ });\nfunction sayHello(){\r\n    console.log(\"HELLO\")\r\n}\r\n\n\n//# sourceURL=webpack://webpack/./src/hello.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -1386,7 +1397,7 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\n//! mome
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sum */ \"./src/sum.js\");\nconst moment = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\")\r\n;\r\n\r\nlet result = (0,_sum__WEBPACK_IMPORTED_MODULE_0__.sum)(234, 343);\r\nconsole.log(\"sum: \",result)\r\nconsole.log((0,_sum__WEBPACK_IMPORTED_MODULE_0__.sum)(123,34343))\r\nconsole.log(\"Dylan\")\r\nconsole.log(moment().startOf('day').fromNow())\r\n\r\n\n\n//# sourceURL=webpack://webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sum */ \"./src/sum.js\");\nconst moment = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\")\r\n;\r\n\r\nlet result = (0,_sum__WEBPACK_IMPORTED_MODULE_0__.sum)(234, 343);\r\nconsole.log(\"sum: \",result)\r\nconsole.log(\"sum: \",result)\r\nconsole.log(\"sum: \",result)\r\nconsole.log(\"sum: \",result)\r\nconsole.log(\"sum: \",result)\r\nconsole.log((0,_sum__WEBPACK_IMPORTED_MODULE_0__.sum)(123,34343))\r\nconsole.log(\"Dylan\")\r\nconsole.log(moment().startOf('day').fromNow())\r\n\r\n\n\n//# sourceURL=webpack://webpack/./src/index.js?");
 
 /***/ }),
 
@@ -1398,6 +1409,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sum
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"sum\": () => (/* binding */ sum)\n/* harmony export */ });\nfunction sum(a, b) {\r\n    return a + b;\r\n}\r\n\n\n//# sourceURL=webpack://webpack/./src/sum.js?");
+
+/***/ }),
+
+/***/ "./src/test.js":
+/*!*********************!*\
+  !*** ./src/test.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("const { sayHello } = __webpack_require__(/*! ./hello */ \"./src/hello.js\");\r\n\r\nsayHello()\n\n//# sourceURL=webpack://webpack/./src/test.js?");
 
 /***/ })
 
@@ -1473,7 +1494,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	__webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/test.js");
 /******/ 	
 /******/ })()
 ;
