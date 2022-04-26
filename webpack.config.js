@@ -10,7 +10,7 @@ module.exports = {
         ]
     },
     output: {
-        filename: 'oneFileBundle.js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean:true
     },
@@ -30,4 +30,5 @@ module.exports = {
         }),
         // new CleanWebpackPlugin()
     ],
+    //devtool:'inline-source-map'
 }
