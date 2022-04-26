@@ -1,0 +1,9 @@
+{
+    "powermode.enabled": true,
+    "powermode.shake.enabled": false,
+    "powermode.explosions.customExplosions":[
+        "https://media.giphy.com/media/iw2tNlO6ob3zi/giphy.gif"
+    ],
+    "powermode.explosions.backgroundMode":"image",
+    "powermode.explosions.duration":1000
+    }

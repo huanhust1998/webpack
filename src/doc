@@ -1,0 +1,17 @@
+- NPM
+    +) Project scope: cài/ xóa thư viện ở trong dự án (khi dự án đang phụ thuộc vào các thư viện này)
+        . npm install react react-dom / npm i react react-dom==> dependencies
+
+        . npm install --save-dev react react-dom / npm i -D react react-dom==> devDependencies
+
+        . npm uninstall react react-dom 
+
+    +) Global scope: cài vào máy tính (khi dự án không bị phụ thuộc vào thư viện)
+        . npm i --global create-react-app
+        . npm i -g create-react-app
+
+        . npm uninstall -g create-react-app
+
+- NPX: Khi cái Node dẫn đến cài NPM dẫn đến cài NPX
+
+- YARN
