@@ -10,6 +10,14 @@ module.exports = {
         clean:true
     },
     mode: 'development',
+    devServer:{
+        static: {
+            directory: path.join(__dirname, 'public'),
+          },
+          compress: true,
+          port: 9000,
+          open:true
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: "Webpack with Dylan",
