@@ -1,5 +1,8 @@
 const moment = require('moment')
 import { sum } from "./sum"
+import _ from 'lodash'
+
+console.log(_.size([1, 2, 4]))
 
 let result = sum(234, 343);
 console.log("sum: ",result)

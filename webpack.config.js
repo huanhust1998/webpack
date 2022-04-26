@@ -3,25 +3,37 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry:{
-        main:[
-            './src/index.js',
-            './src/test.js',
-        ]
+    entry: {
+        index: './src/index.js',
+        home: './src/home.js'
     },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
-        clean:true
+        clean: true
     },
-    mode: 'development',
-    devServer:{
+    mode: "development",
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            }
+        ]
+    },
+    devServer: {
         static: {
             directory: path.join(__dirname, 'public'),
-          },
-          compress: true,
-          port: 9000,
-          open:true
+        },
+        compress: true,
+        port: 9000,
+        open: true
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -31,4 +43,9 @@ module.exports = {
         // new CleanWebpackPlugin()
     ],
     //devtool:'inline-source-map'
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    }
 }
